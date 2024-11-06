@@ -95,7 +95,7 @@ float4 main(PSInput input) : SV_Target
     DI.rgb *= s;
     I += DI;
     I.a = input.cDiffuse.a;
-    float dimming = Param._m01;
+    float dimming = Param._m01; 
     I.rgb *= dimming;
     int density = Param._m00;   
     float2 pixel = floor(input.p.xy);
@@ -106,6 +106,7 @@ float4 main(PSInput input) : SV_Target
     c = when_eq(c, 0);
     b = clamp(b + c, 0, 1);
     I = I * (1 - b) + (I * (1 - Param._m02) + Color * Param._m02) * b;
+    //return float4(0,0,0,0);
     return saturate(I);
 }
 
