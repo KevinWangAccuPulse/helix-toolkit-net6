@@ -422,7 +422,7 @@ namespace HelixToolkit.UWP
                             DefaultVSShaderDescriptions.VSMeshDefault,
                             DefaultPSShaderDescriptions.PSEffectMeshXRay
                         },
-                        BlendStateDescription = DefaultBlendStateDescriptions.BSOverlayBlending,
+                        BlendStateDescription = DefaultBlendStateDescriptions.BSGlowBlending,
                         DepthStencilStateDescription = DefaultDepthStencilDescriptions.DSSEffectMeshXRayP2,
                         StencilRef = 1
                     },

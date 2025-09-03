@@ -22,13 +22,15 @@ namespace CustomShaderDemo
     using Vector3D = System.Windows.Media.Media3D.Vector3D;
     using Transform3D = System.Windows.Media.Media3D.Transform3D;
     using TranslateTransform3D = System.Windows.Media.Media3D.TranslateTransform3D;
+    using System.IO;
+
     public class MainViewModel : BaseViewModel
     {
         public MeshGeometry3D Model { get; private set; }
         public MeshGeometry3D SphereModel { get; private set; }
         public LineGeometry3D AxisModel { get; private set; }
         public BillboardText3D AxisLabel { private set; get; }
-        public ColorStripeMaterial ModelMaterial { get; private set; } = new ColorStripeMaterial();
+        public ColorStripeMaterial ModelMaterial { get; private set; } = new ColorStripeMaterial(){DiffuseColor = new Color4(1.0f,0.0f,0.0f,1)};
         public PhongMaterial SphereMaterial { private set; get; } = PhongMaterials.Copper;
 
         public PointGeometry3D PointModel { private set; get; }
@@ -94,6 +96,19 @@ namespace CustomShaderDemo
             get { return endColor; }
         }
 
+        private int colorStride;
+        public int ColorStride
+        {
+            set
+            {
+                if (SetValue(ref colorStride, value))
+                {
+                    GetMapColor(value);
+                }
+            }
+            get { return colorStride; }
+        }
+
         private Color4Collection colorGradient;
         public Color4Collection ColorGradient
         {
@@ -135,6 +150,8 @@ namespace CustomShaderDemo
 
         public ICommand GenerateNoiseCommand { private set; get; }
 
+        private List<Color4> _colorMap = new List<Color4>();
+
         public MainViewModel()
         {
             // titles
@@ -167,9 +184,11 @@ namespace CustomShaderDemo
             {
                 Model.Normals[i] = new Vector3(0, Math.Abs(Model.Normals[i].Y), 0);
             }
-            StartColor = Colors.Blue;
-            MidColor = Colors.Green;
-            EndColor = Colors.Red;
+
+            GetMapColors();
+            //StartColor = Colors.Blue;
+            //MidColor = Colors.Green;
+            //EndColor = Colors.Red;
 
             var lineBuilder = new LineBuilder();
             lineBuilder.AddLine(new Vector3(0, 0, 0), new Vector3(10, 0, 0));
@@ -202,6 +221,49 @@ namespace CustomShaderDemo
                 Positions = SphereModel.Positions
             };
             CustomPointMaterial = new CustomPointMaterial() { Color = Colors.White };
+        }
+
+        private void GetMapColors()
+        {
+            var colorValues = new List<float>();
+            using (var reader = new StreamReader(@"D:\Repos\helix-toolkit-net6\Source\Examples\WPF.SharpDX\CustomShaderDemo\colorbarvalues.csv"))
+            {
+                while (!reader.EndOfStream)
+                {
+                    var line = reader.ReadLine();
+                    var values = line.Split(',');
+
+                    foreach (var value in values)
+                    {
+                        float.TryParse(value, out var floatValue);
+                        colorValues.Add(floatValue);
+                    }
+                }
+            }
+
+            for (int i = 0; i < colorValues.Count / 3; i++)
+            {
+                var A = 0xFF;
+                var R = (byte)(255 * colorValues[i * 3]);
+                var G = (byte)(255 * colorValues[i * 3 + 1]);
+                var B = (byte)(255 * colorValues[i * 3 + 2]);
+                var value = (A << 24) | (R << 16) | (G << 8) | B;
+                _colorMap.Add(new Color4(colorValues[i * 3], colorValues[i*3+1], colorValues[i*3+2], 1));
+            }
+
+            ColorGradient = new Color4Collection(_colorMap);
+        }
+
+        private void GetMapColor(int stride)
+        {
+            List<Color4> colorMap = new List<Color4>();
+            for (int i = 0; i < _colorMap.Count; i += stride)
+            {
+                colorMap.Add(_colorMap[i]);
+            }
+            colorMap.Add(_colorMap.Last());
+
+            ColorGradient = new Color4Collection(colorMap);
         }
 
         public static IEnumerable<Color4> GetGradients(Color4 start, Color4 mid, Color4 end, int steps)

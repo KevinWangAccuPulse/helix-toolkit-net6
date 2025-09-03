@@ -73,7 +73,7 @@
                 Material="{Binding ModelMaterial}"
                 RenderWireframe="True"
                 WireframeColor="#3F3B3B3B" />
-            <hx:LineGeometryModel3D Geometry="{Binding AxisModel}" Color="White" />
+            <!--<hx:LineGeometryModel3D Geometry="{Binding AxisModel}" Color="White" />
             <hx:BillboardTextModel3D
                 x:Name="text"
                 Geometry="{Binding AxisLabel}"
@@ -84,7 +84,7 @@
                 Geometry="{Binding SphereModel}"
                 Material="{Binding SphereMaterial}" />
             <hx:PointMaterialGeometryModel3D Geometry="{Binding PointModel}" Material="{Binding CustomPointMaterial}" Transform="{Binding PointTransform}"/>
-            <hx:ContinuousRender3D/>
+            <hx:ContinuousRender3D/>-->
         </hx:Viewport3DX>
 
         <StackPanel
@@ -104,6 +104,37 @@
                 Maximum="10"
                 Minimum="-10"
                 Value="{Binding ElementName=dataVisual, Path=HeightScale}" />
+            <StackPanel Orientation="Horizontal">
+                <Label>WOI Min:</Label>
+                <TextBlock VerticalAlignment="Center" Text="{Binding ElementName=dataVisual, Path=WoiMin, StringFormat=N3}" />
+            </StackPanel>
+            <Slider
+                Margin="0,0,0,5"
+                Maximum="100"
+                Minimum="0"
+                SmallChange="1"
+                Value="{Binding ElementName=dataVisual, Path=WoiMin}" />
+            <StackPanel Orientation="Horizontal">
+                <Label>WOI Max:</Label>
+                <TextBlock VerticalAlignment="Center" Text="{Binding ElementName=dataVisual, Path=WoiMax, StringFormat=N3}" />
+            </StackPanel>
+            <Slider
+                Margin="0,0,0,5"
+                Maximum="100"
+                Minimum="0"
+                SmallChange="1"
+                Value="{Binding ElementName=dataVisual, Path=WoiMax}" />
+            <StackPanel Orientation="Horizontal">
+                <Label>Stride:</Label>
+                <TextBlock VerticalAlignment="Center" Text="{Binding ElementName=dataVisual, Path=Stride, StringFormat=N3}" />
+            </StackPanel>
+            <Slider
+                Margin="0,0,0,5"
+                IsSnapToTickEnabled="True"
+                Maximum="128"
+                Minimum="1"
+                Ticks="1,2,4,8,16,32,64,128"
+                Value="{Binding ElementName=dataVisual, Path=Stride, StringFormat=N0}" />
             <Label>Color Min:</Label>
             <pt:ColorPicker SelectedColor="{Binding StartColor}" />
             <Label>Color Middle:</Label>

@@ -52,52 +52,52 @@ float4 main(PSInput input) : SV_Target
             float3 h = normalize(eye + d);
             DI += calcBlinnPhongLighting(Lights[i].vLightColor, vMaterialTexture, input.n, input.cDiffuse, d, h);
         }
-        else if (Lights[i].iLightType == 2)  // point
-        {
-            float3 d = (float3) (Lights[i].vLightPos - input.wp); // light dir
-            float dl = length(d); // light distance
-            if (Lights[i].vLightAtt.w < dl)
-            {
-                continue;
-            }
-            d = d / dl; // normalized light dir						
-            float3 h = normalize(eye + d); // half direction for specular
-            float att = 1.0f / (Lights[i].vLightAtt.x + Lights[i].vLightAtt.y * dl + Lights[i].vLightAtt.z * dl * dl);
-            DI = mad(att, calcBlinnPhongLighting(Lights[i].vLightColor, vMaterialTexture, input.n, input.cDiffuse, d, h), DI);
-        }
-        else if (Lights[i].iLightType == 3)  // spot
-        {
-            float3 d = (float3) (Lights[i].vLightPos - input.wp); // light dir
-            float dl = length(d); // light distance
-            if (Lights[i].vLightAtt.w < dl)
-            {
-                continue;
-            }
-            d = d / dl; // normalized light dir					
-            float3 h = normalize(eye + d); // half direction for specular
-            float3 sd = normalize((float3) Lights[i].vLightDir); // missuse the vLightDir variable for spot-dir
+        //else if (Lights[i].iLightType == 2)  // point
+        //{
+        //    float3 d = (float3) (Lights[i].vLightPos - input.wp); // light dir
+        //    float dl = length(d); // light distance
+        //    if (Lights[i].vLightAtt.w < dl)
+        //    {
+        //        continue;
+        //    }
+        //    d = d / dl; // normalized light dir						
+        //    float3 h = normalize(eye + d); // half direction for specular
+        //    float att = 1.0f / (Lights[i].vLightAtt.x + Lights[i].vLightAtt.y * dl + Lights[i].vLightAtt.z * dl * dl);
+        //    DI = mad(att, calcBlinnPhongLighting(Lights[i].vLightColor, vMaterialTexture, input.n, input.cDiffuse, d, h), DI);
+        //}
+        //else if (Lights[i].iLightType == 3)  // spot
+        //{
+        //    float3 d = (float3) (Lights[i].vLightPos - input.wp); // light dir
+        //    float dl = length(d); // light distance
+        //    if (Lights[i].vLightAtt.w < dl)
+        //    {
+        //        continue;
+        //    }
+        //    d = d / dl; // normalized light dir					
+        //    float3 h = normalize(eye + d); // half direction for specular
+        //    float3 sd = normalize((float3) Lights[i].vLightDir); // missuse the vLightDir variable for spot-dir
 
-														    /* --- this is the OpenGL 1.2 version (not so nice) --- */
-														    //float spot = (dot(-d, sd));
-														    //if(spot > cos(vLightSpot[i].x))
-														    //	spot = pow( spot, vLightSpot[i].y );
-														    //else
-														    //	spot = 0.0f;	
-														    /* --- */
+								//						    /* --- this is the OpenGL 1.2 version (not so nice) --- */
+								//						    //float spot = (dot(-d, sd));
+								//						    //if(spot > cos(vLightSpot[i].x))
+								//						    //	spot = pow( spot, vLightSpot[i].y );
+								//						    //else
+								//						    //	spot = 0.0f;	
+								//						    /* --- */
 
-														    /* --- this is the  DirectX9 version (better) --- */
-            float rho = dot(-d, sd);
-            float spot = pow(saturate((rho - Lights[i].vLightSpot.x) / (Lights[i].vLightSpot.y - Lights[i].vLightSpot.x)), Lights[i].vLightSpot.z);
-            float att = spot / (Lights[i].vLightAtt.x + Lights[i].vLightAtt.y * dl + Lights[i].vLightAtt.z * dl * dl);
-            DI = mad(att, calcBlinnPhongLighting(Lights[i].vLightColor, vMaterialTexture, input.n, input.cDiffuse, d, h), DI);
-        }
+								//						    /* --- this is the  DirectX9 version (better) --- */
+        //    float rho = dot(-d, sd);
+        //    float spot = pow(saturate((rho - Lights[i].vLightSpot.x) / (Lights[i].vLightSpot.y - Lights[i].vLightSpot.x)), Lights[i].vLightSpot.z);
+        //    float att = spot / (Lights[i].vLightAtt.x + Lights[i].vLightAtt.y * dl + Lights[i].vLightAtt.z * dl * dl);
+        //    DI = mad(att, calcBlinnPhongLighting(Lights[i].vLightColor, vMaterialTexture, input.n, input.cDiffuse, d, h), DI);
+        //}
     }
-    DI.rgb *= s;
+    //DI.rgb *= s;
     I += DI;
-    I.a = input.cDiffuse.a;
-    float dimming = Param._m01; 
-    I.rgb *= dimming;
-    int density = Param._m00;   
+    //I.a = input.cDiffuse.a;
+    //float dimming = Param._m01; 
+    //I.rgb *= dimming;
+    /*int density = Param._m00;   
     float2 pixel = floor(input.p.xy);
     float a = 1;
     float b = fmod(abs(pixel.x - pixel.y), density);
@@ -105,7 +105,7 @@ float4 main(PSInput input) : SV_Target
     b = when_eq(b, 0);
     c = when_eq(c, 0);
     b = clamp(b + c, 0, 1);
-    I = I * (1 - b) + (I * (1 - Param._m02) + Color * Param._m02) * b;
+    I = I * (1 - b) + (I * (1 - Param._m02) + Color * Param._m02) * b;*/
     //return float4(0,0,0,0);
     return saturate(I);
 }

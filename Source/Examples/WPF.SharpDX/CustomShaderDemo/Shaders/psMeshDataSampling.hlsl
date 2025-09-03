@@ -13,8 +13,13 @@ float4 calcBlinnPhongLighting(float4 LColor, float4 vMaterialTexture, float3 N, 
 }
 
 float4 main(PSInput input) : SV_Target
-{    
-    float4 vMaterialTexture = texColorStripe1DX.Sample(samplerSurface, input.t.x);
+{
+    //normalized to [0,1]
+    float t = saturate((input.t.x *98  - vParams.x) / (vParams.z - vParams.x));
+    float arrayIndex = max(0,floor(t * 512 / vParams.w) * vParams.w);
+    arrayIndex = min(arrayIndex, 511);
+    float4 vMaterialTexture = texColorStripe1DX[arrayIndex];
+    //float4 vMaterialTexture = texColorStripe1DX.Sample(samplerSurface, input.t.x);
     float3 ddxPos = ddx(input.vEye.xyz);
     float3 ddyPos = ddy(input.vEye.xyz);
     float3 n = cross(ddxPos, ddyPos);

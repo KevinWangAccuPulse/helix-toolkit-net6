@@ -30,7 +30,7 @@ float3 calcNormal(PSInput input)
 		// Expand the range of the normal value from (0, +1) to (-1, +1).
         bumpMap = (bumpMap * 2.0f) - 1.0f;
 		// Calculate the normal from the data in the bump map.
-        input.n = input.n + bumpMap.x * input.t1 + bumpMap.y * input.t2;
+        //input.n = input.n + bumpMap.x * input.t1 + bumpMap.y * input.t2;
     }
     return normalize(input.n);
 }

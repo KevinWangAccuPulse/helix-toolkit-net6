@@ -443,7 +443,7 @@ namespace HelixToolkit.UWP
                 IsDepthEnabled = true,
                 IsStencilEnabled = true,
                 DepthWriteMask = DepthWriteMask.Zero,
-                DepthComparison = Comparison.Greater,
+                DepthComparison = Comparison.NotEqual,
                 StencilWriteMask = 0,
                 StencilReadMask = 0xFF,
                 BackFace = new DepthStencilOperationDescription()

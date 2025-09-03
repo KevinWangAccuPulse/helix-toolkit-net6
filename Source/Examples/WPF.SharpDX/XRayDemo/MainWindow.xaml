@@ -56,16 +56,14 @@
                 PostEffects="xray"
                 Transform="{Binding ModelTransform}" />
 
-            <hx:OutLineMeshGeometryModel3D
+            <!--<hx:MeshGeometryModel3D
                 CullMode="Back"
                 Geometry="{Binding Model}"
                 Instances="{Binding OutlineInstances}"
                 Material="{Binding ModelMaterial}"
-                OutlineColor="Yellow"
-                OutlineFadingFactor="{Binding ElementName=xrayEffect, Path=OutlineFadingFactor}"
                 PostEffects="xrayGrid"
-                Transform="{Binding ModelTransform}" />
-            <hx:ScreenSpacedGroup3D>
+                Transform="{Binding ModelTransform}" />-->
+            <!--<hx:ScreenSpacedGroup3D>
                 <hx:GroupModel3D Transform="{Binding ScreenSpacedScale}">
                     <hx:MeshGeometryModel3D
                         CullMode="Back"
@@ -84,13 +82,12 @@
                         Geometry="{Binding Model}"
                         Instances="{Binding OutlineInstances}"
                         Material="{Binding ModelMaterial}"
-                        OutlineColor="Yellow"
                         OutlineFadingFactor="{Binding ElementName=xrayEffect, Path=OutlineFadingFactor}"
                         PostEffects="xrayGrid"
                         Transform="{Binding ModelTransform}" />
                 </hx:GroupModel3D>
 
-            </hx:ScreenSpacedGroup3D>
+            </hx:ScreenSpacedGroup3D>-->
             <hx:PostEffectMeshXRay
                 x:Name="xrayEffect"
                 EffectName="xray"

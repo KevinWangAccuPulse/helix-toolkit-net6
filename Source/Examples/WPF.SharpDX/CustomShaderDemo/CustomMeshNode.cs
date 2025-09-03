@@ -23,6 +23,42 @@ namespace CustomShaderDemo
             }
         }
 
+        public float WoiMin
+        {
+            set
+            {
+                (RenderCore as CustomMeshCore).DataWoiMin = value;
+            }
+            get
+            {
+                return (RenderCore as CustomMeshCore).DataWoiMin;
+            }
+        }
+
+        public float WoiMax
+        {
+            set
+            {
+                (RenderCore as CustomMeshCore).DataWoiMax = value;
+            }
+            get
+            {
+                return (RenderCore as CustomMeshCore).DataWoiMax;
+            }
+        }
+
+        public float Stride
+        {
+            set
+            {
+                (RenderCore as CustomMeshCore).DataStride = value;
+            }
+            get
+            {
+                return (RenderCore as CustomMeshCore).DataStride;
+            }
+        }
+
         protected override RenderCore OnCreateRenderCore()
         {
             return new CustomMeshCore();

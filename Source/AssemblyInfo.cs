@@ -1,8 +1,6 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="GlobalAssemblyInfo.cs" company="Helix Toolkit">
-//   Copyright (c) 2014 Helix Toolkit contributors
-// </copyright>
-// --------------------------------------------------------------------------------------------------------------------
+﻿// The MIT License (MIT)
+// Copyright (c) 2018 Helix Toolkit contributors
+// See the LICENSE file in the project root for more information.
 
 using System.Reflection;
 

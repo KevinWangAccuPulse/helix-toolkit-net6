@@ -11,6 +11,9 @@ using Point3D = System.Windows.Media.Media3D.Point3D;
 using Vector3D = System.Windows.Media.Media3D.Vector3D;
 using HelixToolkit.Wpf.SharpDX.Model;
 using Media3D = System.Windows.Media.Media3D;
+using System.Windows.Media;
+using Color = SharpDX.Color;
+using Matrix = SharpDX.Matrix;
 
 namespace BatchedMeshDemo
 {
@@ -83,14 +86,14 @@ namespace BatchedMeshDemo
         public MainViewModel()
         {
             EffectsManager = new DefaultEffectsManager();
-            Camera = new PerspectiveCamera() { Position = new Point3D(0, 0, 200), LookDirection = new Vector3D(0, 0, -200), UpDirection = new Vector3D(0, 1, 0), FarPlaneDistance = 1000 };
-            Task.Run(() => { LoadModels(); });
-            var builder = new MeshBuilder(true);
-            builder.AddBox(new Vector3(0, -65, 0), 600, 1, 600);
-            FloorModel = builder.ToMesh();
-            (MainMaterial as PhongMaterial).NormalMap = new TextureModel("TextureNoise1_dot3.jpg");
-            (MainMaterial as PhongMaterial).RenderShadowMap = true;
-            (FloorMaterial as PhongMaterial).RenderShadowMap = true;
+            Camera = new PerspectiveCamera() { Position = new Point3D(0, 0, 160), LookDirection = new Vector3D(0, 0, -160), UpDirection = new Vector3D(0, 1, 0), FarPlaneDistance = 1000};
+            LoadModels();
+            //var builder = new MeshBuilder(true);
+            //builder.AddBox(new Vector3(0, -65, 0), 600, 1, 600);
+            //FloorModel = builder.ToMesh();
+            //(MainMaterial as PhongMaterial).NormalMap = new TextureModel("TextureNoise1_dot3.jpg");
+            //(MainMaterial as PhongMaterial).RenderShadowMap = true;
+            //(FloorMaterial as PhongMaterial).RenderShadowMap = true;
         }
 
         private void LoadModels()
@@ -108,29 +111,60 @@ namespace BatchedMeshDemo
                 materialDict.Add(model.Material, count++);
             }
             var modelList = new List<BatchedMeshGeometryConfig>(models.Count);
-            foreach(var model in models)
-            {
-                model.Geometry.UpdateOctree();
-                if(model.Transform != null)
-                {
-                    foreach(var transform in model.Transform)
-                    {
-                        modelList.Add(new BatchedMeshGeometryConfig(model.Geometry, transform, materialDict[model.Material]));
-                        //modelList.Add(new BatchedMeshGeometryConfig(model.Geometry, transform, 0));
-                    }
-                }
-                else
-                {
-                    modelList.Add(new BatchedMeshGeometryConfig(model.Geometry, Matrix.Identity, materialDict[model.Material]));
-                    //modelList.Add(new BatchedMeshGeometryConfig(model.Geometry, Matrix.Identity, 0));
-                }
-            }
+            //foreach (var model in models)
+            //{
+            //    model.Geometry.UpdateOctree();
+            //    if (model.Transform != null)
+            //    {
+            //        foreach (var transform in model.Transform)
+            //        {
+            //            modelList.Add(new BatchedMeshGeometryConfig(model.Geometry, transform, materialDict[model.Material]));
+            //            //modelList.Add(new BatchedMeshGeometryConfig(model.Geometry, transform, 0));
+            //        }
+            //    }
+            //    else
+            //    {
+            //        modelList.Add(new BatchedMeshGeometryConfig(model.Geometry, Matrix.Identity, materialDict[model.Material]));
+            //        //modelList.Add(new BatchedMeshGeometryConfig(model.Geometry, Matrix.Identity, 0));
+            //    }
+            //}
+            //var modelList = new List<BatchedMeshGeometryConfig>(2);
+            MeshBuilder meshBuilder = new MeshBuilder();
+            meshBuilder.AddTube(
+                new List<Vector3>() { new Vector3(-30, 0, 0), new Vector3(0, 0, 0), new Vector3(30, 0, 0) }, 9, 36, false, true, true);
+            var geometry = meshBuilder.ToMeshGeometry3D();
+            modelList.Add(new BatchedMeshGeometryConfig(geometry, Matrix.Identity, 9));
 
-            Material[] materials = new Material[materialDict.Count];
-            foreach(var m in materialDict.Keys)
+            MeshBuilder meshBuilder1 = new MeshBuilder();
+            meshBuilder1.AddTube(
+                new List<Vector3>() { new Vector3(-15, 0, 0), new Vector3(0, 0, 0), new Vector3(15, 0, 0) }, 10, 36, false, true, true);
+            var geometry1 = meshBuilder1.ToMeshGeometry3D();
+            modelList.Add(new BatchedMeshGeometryConfig(geometry1, Matrix.Identity, 10));
+
+            //MeshBuilder meshBuilder2 = new MeshBuilder();
+            //meshBuilder2.AddTube(
+            //    new List<Vector3>() { new Vector3(0, 0,-30), new Vector3(0, 0, 0), new Vector3(0, 0, 30) }, 10, 36, false);
+            //var geometry2 = meshBuilder2.ToMeshGeometry3D();
+            //modelList.Add(new BatchedMeshGeometryConfig(geometry2, Matrix.Identity, 11));
+
+
+            Material[] materials = new Material[materialDict.Count + 3];
+            foreach (var m in materialDict.Keys)
             {
                 materials[materialDict[m]] = m.ConvertToMaterial();
             }
+
+            //Material[] materials = new Material[5];
+            //materials[0] = new PhongMaterial()
+            //{
+            //    SpecularColor = Color4.White,
+            //    SpecularShininess = 100,
+            //    DiffuseColor = Colors.OrangeRed.ToColor4()
+            //};
+            //materials[1] = PhongMaterials.Red;
+            materials[9] = PhongMaterials.Blue;
+            materials[10] = PhongMaterials.Gray;
+            materials[11] = PhongMaterials.Red;
             context.Post((o) => 
             {
                 BatchedMeshes = modelList;

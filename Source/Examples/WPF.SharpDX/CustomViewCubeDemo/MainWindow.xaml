@@ -46,15 +46,15 @@
                     Transform="{Binding ViewCubeTransform3}" />
             </hx:ScreenSpacedGroup3D>
             <hx:ScreenSpacedGroup3D
-                RelativeScreenLocationX="-0.8"
-                RelativeScreenLocationY="0"
+                RelativeScreenLocationX="0.8"
+                RelativeScreenLocationY="-0.8"
                 SizeScale="2">
                 <hx:MeshGeometryModel3D
                     Geometry="{Binding Geometry}"
                     Material="{Binding ViewCubeMaterial4}"
                     Mouse3DDown="MeshGeometryModel3D_Mouse3DDown"
                     Transform="{Binding ViewCubeTransform3}" />
-                <hx:BillboardTextModel3D Geometry="{Binding CoordinateText}"/>
+                <!--<hx:BillboardTextModel3D Geometry="{Binding CoordinateText}"/>-->
             </hx:ScreenSpacedGroup3D>
             <hx:ScreenSpacedGroup3D
                 AbsolutePosition3D="0,2,0"

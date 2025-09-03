@@ -19,7 +19,7 @@
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
         <hx:Viewport3DX
-            BackgroundColor="Black"
+            BackgroundColor="White"
             Camera="{Binding Camera}"
             EffectsManager="{Binding EffectsManager}"
             RotateAroundMouseDownPoint="True"
@@ -33,30 +33,15 @@
                 <MouseBinding Command="hx:ViewportCommands.Zoom" Gesture="MiddleClick" />
                 <MouseBinding Command="hx:ViewportCommands.Pan" Gesture="LeftClick" />
             </hx:Viewport3DX.InputBindings>
-            <hx:ShadowMap3D OrthoWidth="300" />
-            <hx:AmbientLight3D Color="#414141" />
-            <hx:DirectionalLight3D Direction="50, -200, -100" />
+            <hx:AmbientLight3D Color="#c0c0c0" />
+            <hx:DirectionalLight3D Direction="0,0, -160" Color="White"/>
             <hx:BatchedMeshGeometryModel3D
                 x:Name="batchedMesh"
                 BatchedGeometries="{Binding BatchedMeshes}"
                 BatchedMaterials="{Binding BatchedMaterials}"
                 CullMode="Back"
-                IsThrowingShadow="True"
                 Material="{Binding MainMaterial}"
-                Mouse3DDown="BatchedMeshGeometryModel3D_Mouse3DDown"
                 Transform="{Binding BatchedTransform}" />
-            <hx:MeshGeometryModel3D
-                CullMode="Back"
-                DepthBias="-100"
-                Geometry="{Binding SelectedGeometry}"
-                IsHitTestVisible="False"
-                IsThrowingShadow="False"
-                Material="{Binding SelectedMaterial}"
-                Transform="{Binding SelectedTransform}" />
-            <hx:AxisPlaneGridModel3D
-                AutoSpacing="false"
-                RenderShadowMap="true"
-                Offset="-65" />
         </hx:Viewport3DX>
         <StackPanel Grid.Column="1" Orientation="Vertical">
             <CheckBox IsChecked="{Binding ElementName=batchedMesh, Path=RenderWireframe}">Wireframe</CheckBox>

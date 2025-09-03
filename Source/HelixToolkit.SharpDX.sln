@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelixToolkit.Wpf.SharpDX", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{76556164-48F2-4CAA-859B-5573F790970C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDemo", "Examples\WPF.SharpDX\SimpleDemo\SimpleDemo.csproj", "{467C5E3B-0FC9-4454-A277-7350D0C10ADB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleDemo", "Examples\WPF.SharpDX\SimpleDemo\SimpleDemo.csproj", "{467C5E3B-0FC9-4454-A277-7350D0C10ADB}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HelixToolkit.Shared", "HelixToolkit.Shared\HelixToolkit.Shared.shproj", "{4EE18E80-7609-4FFF-BD4B-F02728EC0688}"
 EndProject
@@ -21,76 +21,76 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HelixToolkit.SharpDX.Shared
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoCore", "Examples\WPF.SharpDX\DemoCore\DemoCore.csproj", "{B475C12B-80F9-4BC0-88E5-815C88593BEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomShaderDemo", "Examples\WPF.SharpDX\CustomShaderDemo\CustomShaderDemo.csproj", "{829730D4-B471-4D12-B8B8-4900761E0722}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomShaderDemo", "Examples\WPF.SharpDX\CustomShaderDemo\CustomShaderDemo.csproj", "{829730D4-B471-4D12-B8B8-4900761E0722}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnvironmentMapDemo", "Examples\WPF.SharpDX\EnvironmentMapDemo\EnvironmentMapDemo.csproj", "{82D01A4F-51B2-4771-B6F2-EDC6240159E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnvironmentMapDemo", "Examples\WPF.SharpDX\EnvironmentMapDemo\EnvironmentMapDemo.csproj", "{82D01A4F-51B2-4771-B6F2-EDC6240159E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleBrowser", "Examples\WPF.SharpDX\ExampleBrowser\ExampleBrowser.csproj", "{4346C754-0272-4962-B5A7-8E74CD673932}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleBrowser", "Examples\WPF.SharpDX\ExampleBrowser\ExampleBrowser.csproj", "{4346C754-0272-4962-B5A7-8E74CD673932}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileLoadDemo", "Examples\WPF.SharpDX\FileLoadDemo\FileLoadDemo.csproj", "{04A4763C-907A-45EE-9270-2ECB1453770F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileLoadDemo", "Examples\WPF.SharpDX\FileLoadDemo\FileLoadDemo.csproj", "{04A4763C-907A-45EE-9270-2ECB1453770F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageViewDemo", "Examples\WPF.SharpDX\ImageViewDemo\ImageViewDemo.csproj", "{1C8BB886-9619-4D18-8D09-AD6A3E3506FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageViewDemo", "Examples\WPF.SharpDX\ImageViewDemo\ImageViewDemo.csproj", "{1C8BB886-9619-4D18-8D09-AD6A3E3506FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstancingDemo", "Examples\WPF.SharpDX\InstancingDemo\InstancingDemo.csproj", "{58309989-DC5D-486E-99F2-245E84DC8D7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstancingDemo", "Examples\WPF.SharpDX\InstancingDemo\InstancingDemo.csproj", "{58309989-DC5D-486E-99F2-245E84DC8D7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightingDemo", "Examples\WPF.SharpDX\LightingDemo\LightingDemo.csproj", "{8CE35F6D-C06D-4045-A2C1-7F1795B62811}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LightingDemo", "Examples\WPF.SharpDX\LightingDemo\LightingDemo.csproj", "{8CE35F6D-C06D-4045-A2C1-7F1795B62811}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineShadingDemo", "Examples\WPF.SharpDX\LineShadingDemo\LineShadingDemo.csproj", "{BC976236-A1A1-4E44-8101-17823EA7C945}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LineShadingDemo", "Examples\WPF.SharpDX\LineShadingDemo\LineShadingDemo.csproj", "{BC976236-A1A1-4E44-8101-17823EA7C945}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManipulatorDemo", "Examples\WPF.SharpDX\ManipulatorDemo\ManipulatorDemo.csproj", "{84F9C577-C2CE-4719-A5BE-7C4985FE7A46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManipulatorDemo", "Examples\WPF.SharpDX\ManipulatorDemo\ManipulatorDemo.csproj", "{84F9C577-C2CE-4719-A5BE-7C4985FE7A46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MouseDragDemo", "Examples\WPF.SharpDX\MouseDragDemo\MouseDragDemo.csproj", "{734192F0-18E9-4A8F-8328-9215928ACE1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MouseDragDemo", "Examples\WPF.SharpDX\MouseDragDemo\MouseDragDemo.csproj", "{734192F0-18E9-4A8F-8328-9215928ACE1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolygonTriangulationDemo", "Examples\WPF.SharpDX\PolygonTriangulationDemo\PolygonTriangulationDemo.csproj", "{AEE87C0E-AA98-4D82-9ED8-9EBEA107DDD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolygonTriangulationDemo", "Examples\WPF.SharpDX\PolygonTriangulationDemo\PolygonTriangulationDemo.csproj", "{AEE87C0E-AA98-4D82-9ED8-9EBEA107DDD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShadowMapDemo", "Examples\WPF.SharpDX\ShadowMapDemo\ShadowMapDemo.csproj", "{D9C22065-B07A-432C-B319-87BCE640600C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShadowMapDemo", "Examples\WPF.SharpDX\ShadowMapDemo\ShadowMapDemo.csproj", "{D9C22065-B07A-432C-B319-87BCE640600C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateDemo", "Examples\WPF.SharpDX\TemplateDemo\TemplateDemo.csproj", "{10CF1F8D-1297-495C-92C2-A24E341AA7AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplateDemo", "Examples\WPF.SharpDX\TemplateDemo\TemplateDemo.csproj", "{10CF1F8D-1297-495C-92C2-A24E341AA7AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TessellationDemo", "Examples\WPF.SharpDX\TessellationDemo\TessellationDemo.csproj", "{82BB6745-9D34-453A-851C-01C8FD7A0F20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TessellationDemo", "Examples\WPF.SharpDX\TessellationDemo\TessellationDemo.csproj", "{82BB6745-9D34-453A-851C-01C8FD7A0F20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTextureDemo", "Examples\WPF.SharpDX\DynamicTextureDemo\DynamicTextureDemo.csproj", "{C7F68E1A-85B4-494A-BA4E-F4270FFF3852}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicTextureDemo", "Examples\WPF.SharpDX\DynamicTextureDemo\DynamicTextureDemo.csproj", "{C7F68E1A-85B4-494A-BA4E-F4270FFF3852}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoneSkinDemo", "Examples\WPF.SharpDX\BoneSkinDemo\BoneSkinDemo.csproj", "{676675F0-18A4-4D08-AEB5-C561473AF7EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoneSkinDemo", "Examples\WPF.SharpDX\BoneSkinDemo\BoneSkinDemo.csproj", "{676675F0-18A4-4D08-AEB5-C561473AF7EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossSectionDemo", "Examples\WPF.SharpDX\CrossSectionDemo\CrossSectionDemo.csproj", "{7B612920-493C-448B-B21B-D5A453045AAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossSectionDemo", "Examples\WPF.SharpDX\CrossSectionDemo\CrossSectionDemo.csproj", "{7B612920-493C-448B-B21B-D5A453045AAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D2DScreenMenuExample", "Examples\WPF.SharpDX\D2DScreenMenuExample\D2DScreenMenuExample.csproj", "{0AB7D9F3-CF1F-462E-8763-7DC1E672CAAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D2DScreenMenuExample", "Examples\WPF.SharpDX\D2DScreenMenuExample\D2DScreenMenuExample.csproj", "{0AB7D9F3-CF1F-462E-8763-7DC1E672CAAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OctreeDemo", "Examples\WPF.SharpDX\OctreeDemo\OctreeDemo.csproj", "{BE3C1DBD-3345-4E32-BE7E-C3CCFDDD7220}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OctreeDemo", "Examples\WPF.SharpDX\OctreeDemo\OctreeDemo.csproj", "{BE3C1DBD-3345-4E32-BE7E-C3CCFDDD7220}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwapChainRenderingDemo", "Examples\WPF.SharpDX\SwapChainRenderingDemo\SwapChainRenderingDemo.csproj", "{E23D3A8B-376F-4B10-B2BD-ADC3F082805C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwapChainRenderingDemo", "Examples\WPF.SharpDX\SwapChainRenderingDemo\SwapChainRenderingDemo.csproj", "{E23D3A8B-376F-4B10-B2BD-ADC3F082805C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParticleSystemDemo", "Examples\WPF.SharpDX\ParticleSystemDemo\ParticleSystemDemo.csproj", "{0045C5F8-76A9-420B-AF44-47D1C1B60DF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParticleSystemDemo", "Examples\WPF.SharpDX\ParticleSystemDemo\ParticleSystemDemo.csproj", "{0045C5F8-76A9-420B-AF44-47D1C1B60DF4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XRayDemo", "Examples\WPF.SharpDX\XRayDemo\XRayDemo.csproj", "{C4F7AE1D-C03F-4060-A89B-C8CE47AD5EB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenDuplicationDemo", "Examples\WPF.SharpDX\ScreenDuplicationDemo\ScreenDuplicationDemo.csproj", "{4050D84A-2F13-4C3B-AB32-844A421EA3EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScreenDuplicationDemo", "Examples\WPF.SharpDX\ScreenDuplicationDemo\ScreenDuplicationDemo.csproj", "{4050D84A-2F13-4C3B-AB32-844A421EA3EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupElementTester", "Examples\WPF.SharpDX\GroupElementTester\GroupElementTester.csproj", "{9EF1B158-7CB8-4C29-AE1C-7A1C825F76EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GroupElementTester", "Examples\WPF.SharpDX\GroupElementTester\GroupElementTester.csproj", "{9EF1B158-7CB8-4C29-AE1C-7A1C825F76EB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderIndependantTransparentRendering", "Examples\WPF.SharpDX\OrderIndependantTransparentRendering\OrderIndependantTransparentRendering.csproj", "{B54F7E0F-DF5E-4382-9515-F2A1186CB606}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viewport3DXCodeBehindTester", "Examples\WPF.SharpDX\Viewport3DXCodeBehindTester\Viewport3DXCodeBehindTester.csproj", "{812C2A21-CD7E-4344-A83C-99050A8843D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Viewport3DXCodeBehindTester", "Examples\WPF.SharpDX\Viewport3DXCodeBehindTester\Viewport3DXCodeBehindTester.csproj", "{812C2A21-CD7E-4344-A83C-99050A8843D2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostEffectsDemo", "Examples\WPF.SharpDX\PostEffectsDemo\PostEffectsDemo.csproj", "{931D2262-63B7-4551-8036-36923A04ACF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialDemo", "Examples\WPF.SharpDX\MaterialDemo\MaterialDemo.csproj", "{6C57E679-7A1B-45AC-97B7-AA88D7D9164A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaterialDemo", "Examples\WPF.SharpDX\MaterialDemo\MaterialDemo.csproj", "{6C57E679-7A1B-45AC-97B7-AA88D7D9164A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicCodeSurfaceDemo", "Examples\WPF.SharpDX\DynamicCodeSurfaceDemo\DynamicCodeSurfaceDemo.csproj", "{6BAA6F89-637A-49EB-A554-76AB527A5968}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicCodeSurfaceDemo", "Examples\WPF.SharpDX\DynamicCodeSurfaceDemo\DynamicCodeSurfaceDemo.csproj", "{6BAA6F89-637A-49EB-A554-76AB527A5968}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelixToolkit.SharpDX.Core", "HelixToolkit.SharpDX.Core\HelixToolkit.SharpDX.Core.csproj", "{363664D9-5F18-45C7-B937-2DCEE6F93261}"
 	ProjectSection(ProjectDependencies) = postProject
 		{DF985457-3216-4DB6-9150-6ABA4A177448} = {DF985457-3216-4DB6-9150-6ABA4A177448}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchedMeshDemo", "Examples\WPF.SharpDX\BatchedMeshDemo\BatchedMeshDemo.csproj", "{7AAEFD49-24D2-402D-9BB6-C3445DE8C059}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BatchedMeshDemo", "Examples\WPF.SharpDX\BatchedMeshDemo\BatchedMeshDemo.csproj", "{7AAEFD49-24D2-402D-9BB6-C3445DE8C059}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HelixToolkit.SharpDX.SharedModel", "HelixToolkit.SharpDX.SharedModel\HelixToolkit.SharpDX.SharedModel.shproj", "{1AEFCB64-E997-425A-8C84-DC93263CC4A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryLeakTester", "Examples\WPF.SharpDX\MemoryLeakTester\MemoryLeakTester.csproj", "{A11EE417-571E-42A3-9737-B1F0D377C4CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryLeakTester", "Examples\WPF.SharpDX\MemoryLeakTester\MemoryLeakTester.csproj", "{A11EE417-571E-42A3-9737-B1F0D377C4CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenderTechniqueImportExport", "Examples\WPF.SharpDX\RenderTechniqueImportExport\RenderTechniqueImportExport.csproj", "{7B119430-FE63-4854-9B16-51A1B1ADC533}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RenderTechniqueImportExport", "Examples\WPF.SharpDX\RenderTechniqueImportExport\RenderTechniqueImportExport.csproj", "{7B119430-FE63-4854-9B16-51A1B1ADC533}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelixToolkit.Wpf.SharpDX.Tests", "HelixToolkit.Wpf.SharpDX.Tests\HelixToolkit.Wpf.SharpDX.Tests.csproj", "{405C54C4-69F7-4F3D-A6BA-594346F42A2F}"
 EndProject
@@ -98,11 +98,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelixToolkit.SharpDX.Core.T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BillboardDemo", "Examples\WPF.SharpDX\BillboardDemo\BillboardDemo.csproj", "{D4DBF05A-A7D3-42AF-8447-2F1BEACB9C7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshSimplification", "Examples\WPF.SharpDX\MeshSimplification\MeshSimplification.csproj", "{F03D69ED-DEE5-4245-9A2D-8AD000EC0584}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeshSimplification", "Examples\WPF.SharpDX\MeshSimplification\MeshSimplification.csproj", "{F03D69ED-DEE5-4245-9A2D-8AD000EC0584}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VolumeRendering", "Examples\WPF.SharpDX\VolumeRendering\VolumeRendering.csproj", "{FE982A9C-8416-40B7-9973-012D6B3E022E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VolumeRendering", "Examples\WPF.SharpDX\VolumeRendering\VolumeRendering.csproj", "{FE982A9C-8416-40B7-9973-012D6B3E022E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSAODemo", "Examples\WPF.SharpDX\SSAODemo\SSAODemo.csproj", "{7A60C072-AE61-4ACD-BAEB-84AE4CC57B29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SSAODemo", "Examples\WPF.SharpDX\SSAODemo\SSAODemo.csproj", "{7A60C072-AE61-4ACD-BAEB-84AE4CC57B29}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelixToolkit.SharpDX.Core.Assimp", "HelixToolkit.SharpDX.Core.Assimp\HelixToolkit.SharpDX.Core.Assimp.csproj", "{24B939FB-0696-472F-90A5-84CC393EAD0C}"
 EndProject
@@ -110,13 +110,13 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HelixToolkit.SharpDX.Assimp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelixToolkit.Wpf.SharpDX.Assimp", "HelixToolkit.Wpf.SharpDX.Assimp\HelixToolkit.Wpf.SharpDX.Assimp.csproj", "{997F58F5-5892-4FD5-A724-55CB3C162235}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomViewCubeDemo", "Examples\WPF.SharpDX\CustomViewCubeDemo\CustomViewCubeDemo.csproj", "{B0458F7E-672B-406D-A470-CFEB681221E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomViewCubeDemo", "Examples\WPF.SharpDX\CustomViewCubeDemo\CustomViewCubeDemo.csproj", "{B0458F7E-672B-406D-A470-CFEB681221E9}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HelixToolkit.Wpf.SharpDX.Shared", "HelixToolkit.Wpf.SharpDX.Shared\HelixToolkit.Wpf.SharpDX.Shared.shproj", "{1BD60704-10F4-45EF-AC5C-083350B3012B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelixToolkit.Native.ShaderBuilder", "HelixToolkit.Native.ShaderBuilder\HelixToolkit.Native.ShaderBuilder.csproj", "{DF985457-3216-4DB6-9150-6ABA4A177448}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MorphTargetAnimationDemo", "Examples\WPF.SharpDX\MorphTargetAnimation\MorphTargetAnimationDemo.csproj", "{1D2B4988-A4CC-4C87-BE4F-7E1210E2F21F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MorphTargetAnimationDemo", "Examples\WPF.SharpDX\MorphTargetAnimation\MorphTargetAnimationDemo.csproj", "{1D2B4988-A4CC-4C87-BE4F-7E1210E2F21F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelixToolkit.SharpDX.Core.Wpf", "HelixToolkit.SharpDX.Core.Wpf\HelixToolkit.SharpDX.Core.Wpf.csproj", "{3442C8B8-68B2-44CA-B61F-386851C484DC}"
 EndProject

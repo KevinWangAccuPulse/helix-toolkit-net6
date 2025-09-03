@@ -26,10 +26,43 @@ namespace CustomShaderDemo
             get { return dataHeightScale; }
         }
 
+        private float dataWoiMin = 0;
+        public float DataWoiMin
+        {
+            set
+            {
+                SetAffectsRender(ref dataWoiMin, value);
+            }
+            get { return dataWoiMin; }
+        }
+
+        private float dataWoiMax = 100;
+        public float DataWoiMax
+        {
+            set
+            {
+                SetAffectsRender(ref dataWoiMax, value);
+            }
+            get { return dataWoiMax; }
+        }
+
+        private float dataStride = 1;
+        public float DataStride
+        {
+            set
+            {
+                SetAffectsRender(ref dataStride, value);
+            }
+            get { return dataStride; }
+        }
+
         protected override void OnUpdatePerModelStruct(RenderContext context)
         {
             base.OnUpdatePerModelStruct(context);
+            modelStruct.Params.X = dataWoiMin;
             modelStruct.Params.Y = dataHeightScale;
+            modelStruct.Params.Z = dataWoiMax;
+            modelStruct.Params.W = dataStride;
         }
     }
 }

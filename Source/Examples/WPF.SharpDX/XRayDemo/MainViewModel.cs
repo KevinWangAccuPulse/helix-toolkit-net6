@@ -142,7 +142,7 @@ namespace XRayDemo
             OutlineInstances = new Matrix[6];
             for (int i = 0; i < Instances.Length; ++i)
             {
-                OutlineInstances[i] = Matrix.Translation(new Vector3(15 * i - 30, 15 * (i % 2), 0));
+                OutlineInstances[i] = Matrix.Translation(new Vector3(15 * i - 30, 15 * (i % 2) + 40, 0));
             }
 
             var blendDesc = new BlendStateDescription();
