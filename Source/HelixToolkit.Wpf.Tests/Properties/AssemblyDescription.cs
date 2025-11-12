@@ -5,6 +5,3 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using System.Reflection;
-
-[assembly: AssemblyTitle("Helix Toolkit WPF Unit Tests")]
-[assembly: AssemblyDescription("Unit tests for HelixToolkit.Wpf")]

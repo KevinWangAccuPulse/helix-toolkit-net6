@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <OutputType>WinExe</OutputType>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
@@ -12,9 +12,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System.IO.Compression" />
-    <Reference Include="Triangle">
-      <HintPath>.\Triangle.dll</HintPath>
-    </Reference>
+      <Reference Include="Triangle">
+          <HintPath>.\Triangle.dll</HintPath>
+      </Reference>
   </ItemGroup>
   <ItemGroup>
     <AppDesigner Include="Properties\" />
